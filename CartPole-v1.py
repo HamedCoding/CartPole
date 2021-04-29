@@ -1,3 +1,4 @@
+# CartPole-V1 / Deep Q Learning / Pytorch / OpenAI
 import random
 import numpy as np
 from collections import deque
@@ -25,7 +26,6 @@ class DQNModel(nn.Module):
         self.a3 = nn.Linear(24, action_size)
         self.relu1 = nn.ReLU()
         self.relu2 = nn.ReLU()
-        self.relu3 = nn.ReLU()
 
     def forward(self, x):
         x = self.relu1(self.a1(x))
